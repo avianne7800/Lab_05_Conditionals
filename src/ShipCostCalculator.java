@@ -22,11 +22,14 @@ public class ShipCostCalculator {
         if(InputPrice >= 100)
         {
             System.out.println("You qualify for free shipping!");
-
+            OutputPrice = InputPrice;
+            System.out.println("Your total is: " + OutputPrice);
         }
         else
         {
-
+            OutputPrice = InputPrice + (InputPrice * InputTax);
+            System.out.println("Shipping cost is: " + (InputPrice * InputTax));
+            System.out.println("Your total is: " + OutputPrice);
         }
     }
 }
